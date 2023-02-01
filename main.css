@@ -1,0 +1,65 @@
+@media screen and (max-width: 500px) {
+  body {
+    align-content: center;
+  }
+}
+
+body{
+  background-color: #FDF0D5;
+}
+
+h4 {
+  color: #92B4A7;
+}
+
+.card{
+  border-color: #92B4A7;
+  border-radius: 5px;;
+}
+
+.card-body {
+  background-color: rgb(2, 1, 9, 0.9);
+  color: white;
+}
+
+.hover-img {
+    cursor: pointer;
+    background-color: black;
+    color: #fff;
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+}
+
+.hover-img * {
+    box-sizing:content-box;
+    transition: all 0.45s ease;
+}
+
+.hover-img::before,
+.hover-img::after{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    content: '';
+    transition: all 0.3s ease;
+    z-index: 30;
+    opacity: 0;
+    transform: scaleY(2);
+  }
+
+  .hover-img img {
+    vertical-align: yop;
+    max-width: 100%;
+    backface-visibility: hidden;
+  }
+
+  .hover-img:hover::before,
+  .hover-img:hover::after {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .hover-img:hover > img {
+    opacity: 0.2;
+  }
+  
